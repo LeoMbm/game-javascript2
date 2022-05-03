@@ -53,10 +53,8 @@ window.addEventListener("keydown", (e) => {
 
 let result = setInterval(() => {
   let dinoBottom = parseInt(getComputedStyle(dino).getPropertyValue("bottom"));
-  console.log(dinoBottom);
 
   let treeL = parseInt(getComputedStyle(tree).getPropertyValue("left"));
-  console.log(treeL);
 
   if (dinoBottom <= 90 && treeL >= 20 && treeL <= 145) {
     // console.log("Game Over");
