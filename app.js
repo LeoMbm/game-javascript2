@@ -17,7 +17,7 @@ let socreCounter = () => {
 };
 
 window.addEventListener("keydown", (launch) => {
-  console.log(launch);
+  //   console.log(launch);
   if (launch.code == "KeyL") {
     gameOver.style.display = "none";
     tree.classList.add("treeActive");
@@ -45,10 +45,19 @@ window.addEventListener("keydown", (e) => {
 
 let result = setInterval(() => {
   let dinoBottom = parseInt(getComputedStyle(dino).getPropertyValue("bottom"));
+  console.log(dinoBottom);
 
   let treeL = parseInt(getComputedStyle(tree).getPropertyValue("left"));
+  console.log(treeL);
 
   if (dinoBottom <= 90 && treeL >= 20 && treeL <= 145) {
-    console.log("Game Over");
+    // console.log("Game Over");
+
+    gameOver.style.display = "block";
+    tree.classList.remove("treeActive");
+    road.firstElementChild.style.animation = "none";
+    cloud.firstElementChild.style.animation = "none";
+    clearInterval(interval);
+    playerScore = 0;
   }
 }, 10);
