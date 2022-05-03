@@ -1,8 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,500;1,300&display=swap");
 * {
   padding: 0;
   margin: 0;
   font-family: sans-serif;
   box-sizing: border-box;
+  font-family: "Poppins";
 }
 
 body {
@@ -11,11 +13,34 @@ body {
   height: 100vh;
 }
 
+.firstDisplay {
+  background-color: #000;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#challenge {
+  padding: 50px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 1s ease-in-out;
+}
+
+#challenge:hover {
+  background-color: rgb(71, 137, 224);
+  color: white;
+}
+
 #container {
   height: 400px;
   width: 1200px;
   position: relative;
   overflow: hidden;
+  display: none;
 }
 
 #container #dino {
@@ -135,7 +160,7 @@ body {
 
 #gameOver {
   display: none;
-  font-size: 70px;
+  font-size: 50px;
   position: absolute;
   left: calc(50% - 181px);
   top: calc(50% - 40px);

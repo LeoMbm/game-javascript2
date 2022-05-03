@@ -5,6 +5,7 @@ let road = document.querySelector("#road");
 let cloud = document.querySelector("#cloud");
 let score = document.querySelector("#score");
 let gameOver = document.querySelector("#gameOver");
+let button = document.querySelector(".firstDisplay");
 
 // variable for score
 
@@ -15,6 +16,13 @@ let socreCounter = () => {
   playerScore++;
   score.innerHTML = `Score <b>${playerScore}</b>`;
 };
+
+function letsgo() {
+  button.style.display = "none";
+  container.style.display = "unset";
+}
+
+button.addEventListener("click", letsgo);
 
 window.addEventListener("keydown", (launch) => {
   //   console.log(launch);
